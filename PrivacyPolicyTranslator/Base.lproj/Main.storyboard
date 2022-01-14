@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PrivacyPolicyTranslator" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,15 +705,64 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PrivacyPolicyTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="357"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
+                                <rect key="frame" x="377" y="13" width="90" height="32"/>
+                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6">
+                                <rect key="frame" x="20" y="60" width="440" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="JqO-mj-vnu"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="g4D-Kc-GFy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
+                                <rect key="frame" x="18" y="321" width="104" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Text Here:" id="nCG-VA-1g9">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="7Cq-FE-fBI"/>
+                            <constraint firstItem="Tlh-IL-O9D" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="7ME-5H-BGb"/>
+                            <constraint firstAttribute="trailing" secondItem="Tlh-IL-O9D" secondAttribute="trailing" constant="360" id="BjG-L1-2N8"/>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="top" secondItem="ow6-kb-PM6" secondAttribute="bottom" constant="20" id="DFJ-cY-ukq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tlh-IL-O9D" secondAttribute="trailing" id="Nwh-pw-fIm"/>
+                            <constraint firstItem="ow6-kb-PM6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="X4I-dI-RK1"/>
+                            <constraint firstItem="ow6-kb-PM6" firstAttribute="top" secondItem="Tlh-IL-O9D" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFw-MT-vWw"/>
+                            <constraint firstItem="Tlh-IL-O9D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="dKz-Bc-ry5"/>
+                            <constraint firstItem="ow6-kb-PM6" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="0.708683" id="fmr-TJ-Jvp"/>
+                            <constraint firstAttribute="trailing" secondItem="ow6-kb-PM6" secondAttribute="trailing" constant="20" id="qXA-OL-vsQ"/>
+                            <constraint firstItem="ow6-kb-PM6" firstAttribute="trailing" secondItem="ym8-MT-5cX" secondAttribute="trailing" id="quh-u8-gEr"/>
+                            <constraint firstItem="Tlh-IL-O9D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="tPo-Lp-hh4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn_generateFiles" destination="ym8-MT-5cX" id="XWb-wm-AT0"/>
+                        <outlet property="txt_Input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="874.5"/>
         </scene>
     </scenes>
 </document>
