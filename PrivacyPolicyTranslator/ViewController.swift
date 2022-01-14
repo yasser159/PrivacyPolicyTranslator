@@ -36,14 +36,17 @@ class ViewController: NSViewController {
     }
     
     @IBAction func GenerateFiles(_ sender: Any) {
+                
+        let stringToSave = txt_Input.stringValue
+        let path = FileManager.default.urls(for: .downloadsDirectory,
+                                            in: .userDomainMask)[0].appendingPathComponent("myFile.txt")
+
+        if let stringData = stringToSave.data(using: .utf8) {
+            try? stringData.write(to: path)
+        }
+
+       print("File Saved: ", path)
         
-        let myString = txt_Input.stringValue;
-        
-       // var myText = txt_Input.
-        
-        print(myString)
-        
-        //let _ = dialogOKCancel(question: "Ok?", text: myText)
 
     }
 }
