@@ -12,6 +12,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,17 +40,15 @@ class ViewController: NSViewController {
     
     @IBAction func GenerateFiles(_ sender: Any) {
                 
-        let stringToSave = txt_Input.stringValue
+        let stringToSave = Html_Top + txt_Input.stringValue + Html_Bottom
         let path = FileManager.default.urls(for: .downloadsDirectory,
-                                            in: .userDomainMask)[0].appendingPathComponent("myFile.txt")
+                                            in: .userDomainMask)[0].appendingPathComponent("generated.html")
 
         if let stringData = stringToSave.data(using: .utf8) {
             try? stringData.write(to: path)
         }
 
-       print("File Saved: ", path)
-        
-
+       //print("File Saved: ", path)
     }
 }
 

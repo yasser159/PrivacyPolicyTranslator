@@ -11,6 +11,7 @@
 		335C65CE27911406000B8C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65CD27911406000B8C7A /* ViewController.swift */; };
 		335C65D027911408000B8C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C65CF27911408000B8C7A /* Assets.xcassets */; };
 		335C65D327911408000B8C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335C65D127911408000B8C7A /* Main.storyboard */; };
+		335C65DB27914D6D000B8C7A /* html_strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65DA27914D6D000B8C7A /* html_strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		335C65CF27911408000B8C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		335C65D227911408000B8C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrivacyPolicyTranslator.entitlements; sourceTree = "<group>"; };
+		335C65DA27914D6D000B8C7A /* html_strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = html_strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				335C65CB27911406000B8C7A /* AppDelegate.swift */,
 				335C65CD27911406000B8C7A /* ViewController.swift */,
+				335C65DA27914D6D000B8C7A /* html_strings.swift */,
 				335C65CF27911408000B8C7A /* Assets.xcassets */,
 				335C65D127911408000B8C7A /* Main.storyboard */,
 				335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				335C65CE27911406000B8C7A /* ViewController.swift in Sources */,
+				335C65DB27914D6D000B8C7A /* html_strings.swift in Sources */,
 				335C65CC27911406000B8C7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
