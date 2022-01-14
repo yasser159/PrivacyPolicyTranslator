@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330F37A127916C1B0063E436 /* SwiftGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */; };
+		330F37A827923B430063E436 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 330F37A727923B430063E436 /* Secret.plist */; };
 		335C65CC27911406000B8C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65CB27911406000B8C7A /* AppDelegate.swift */; };
 		335C65CE27911406000B8C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65CD27911406000B8C7A /* ViewController.swift */; };
 		335C65D027911408000B8C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C65CF27911408000B8C7A /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGoogleTranslate.swift; sourceTree = "<group>"; };
+		330F37A727923B430063E436 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
 		335C65C827911406000B8C7A /* PrivacyPolicyTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyPolicyTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335C65CB27911406000B8C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		335C65CD27911406000B8C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				335C65DA27914D6D000B8C7A /* html_strings.swift */,
 				335C65CF27911408000B8C7A /* Assets.xcassets */,
 				335C65D127911408000B8C7A /* Main.storyboard */,
+				330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */,
+				330F37A727923B430063E436 /* Secret.plist */,
 				335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */,
 			);
 			path = PrivacyPolicyTranslator;
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330F37A827923B430063E436 /* Secret.plist in Resources */,
 				335C65D027911408000B8C7A /* Assets.xcassets in Resources */,
 				335C65D327911408000B8C7A /* Main.storyboard in Resources */,
 			);
@@ -135,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				335C65CE27911406000B8C7A /* ViewController.swift in Sources */,
+				330F37A127916C1B0063E436 /* SwiftGoogleTranslate.swift in Sources */,
 				335C65DB27914D6D000B8C7A /* html_strings.swift in Sources */,
 				335C65CC27911406000B8C7A /* AppDelegate.swift in Sources */,
 			);
