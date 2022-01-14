@@ -12,9 +12,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +23,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
 
     func dialogOKCancel(question: String, text: String) -> Bool {
         let alert = NSAlert()
@@ -47,8 +43,6 @@ class ViewController: NSViewController {
         if let stringData = stringToSave.data(using: .utf8) {
             try? stringData.write(to: path)
         }
-
        //print("File Saved: ", path)
     }
 }
-
