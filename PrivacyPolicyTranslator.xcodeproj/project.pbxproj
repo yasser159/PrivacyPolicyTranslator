@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGoogleTranslate.swift; sourceTree = "<group>"; };
 		330F37A727923B430063E436 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		330F37A9279256560063E436 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		335C65C827911406000B8C7A /* PrivacyPolicyTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyPolicyTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335C65CB27911406000B8C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		335C65CD27911406000B8C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		335C65BF27911406000B8C7A = {
 			isa = PBXGroup;
 			children = (
+				330F37A9279256560063E436 /* .gitignore.md */,
 				335C65CA27911406000B8C7A /* PrivacyPolicyTranslator */,
 				335C65C927911406000B8C7A /* Products */,
 			);
