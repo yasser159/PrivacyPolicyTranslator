@@ -9,24 +9,24 @@
 import Foundation
 
 
-private var apiKey: String {
-    get {
-        guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
-                fatalError("Couldn't find file 'Config.plist'.")
-    }
- 
-        let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "API-Key") as? String else {
-                fatalError("Couldn't find key 'API-Key' in 'Secret.plist'.")
-        }
-        return value
-    }
-}
-
-
 /// A helper class for using Google Translate API.
 public class SwiftGoogleTranslate {
-	
+
+    private var apiKey: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
+                    fatalError("Couldn't find file 'Config.plist'.")
+        }
+     
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "API-Key") as? String else {
+                    fatalError("Couldn't find key 'API-Key' in 'Secret.plist'.")
+            }
+            return value
+        }
+    }
+    
+    
 	/// Shared instance.
 	public static let shared = SwiftGoogleTranslate()
 
@@ -81,9 +81,9 @@ public class SwiftGoogleTranslate {
     
 
     
-//	public func start(with apiKey: String) {
-//		self.apiKey = apiKey
-//	}
+	public func start(with apiKey: String) {
+		//self.apiKey = apiKey
+	}
 	
 	/**
 		Translates input text, returning translated text.

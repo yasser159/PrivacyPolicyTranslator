@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PrivacyPolicyTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="357"/>
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="357"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
-                                <rect key="frame" x="377" y="13" width="90" height="32"/>
+                                <rect key="frame" x="383" y="13" width="90" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -721,7 +721,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6">
-                                <rect key="frame" x="20" y="60" width="440" height="253"/>
+                                <rect key="frame" x="20" y="60" width="446" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="253" id="JqO-mj-vnu"/>
                                 </constraints>
@@ -731,28 +731,42 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
-                                <rect key="frame" x="18" y="321" width="104" height="16"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
+                                <rect key="frame" x="18" y="321" width="110" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Text Here:" id="nCG-VA-1g9">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="obL-sv-DFx">
+                                <rect key="frame" x="13" y="13" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hFS-7c-qzI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="callAPI:" target="XfG-lQ-9wD" id="0dU-t7-VeV"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ym8-MT-5cX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="7Cq-FE-fBI"/>
                             <constraint firstItem="Tlh-IL-O9D" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="7ME-5H-BGb"/>
+                            <constraint firstAttribute="bottom" secondItem="obL-sv-DFx" secondAttribute="bottom" constant="20" symbolic="YES" id="ASl-bS-QR7"/>
                             <constraint firstAttribute="trailing" secondItem="Tlh-IL-O9D" secondAttribute="trailing" constant="360" id="BjG-L1-2N8"/>
                             <constraint firstItem="ym8-MT-5cX" firstAttribute="top" secondItem="ow6-kb-PM6" secondAttribute="bottom" constant="20" id="DFJ-cY-ukq"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tlh-IL-O9D" secondAttribute="trailing" id="Nwh-pw-fIm"/>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="leading" secondItem="obL-sv-DFx" secondAttribute="trailing" constant="302" id="WTD-Ko-yBw"/>
                             <constraint firstItem="ow6-kb-PM6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="X4I-dI-RK1"/>
                             <constraint firstItem="ow6-kb-PM6" firstAttribute="top" secondItem="Tlh-IL-O9D" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFw-MT-vWw"/>
+                            <constraint firstItem="obL-sv-DFx" firstAttribute="top" secondItem="ow6-kb-PM6" secondAttribute="bottom" constant="20" id="a40-qp-4cB"/>
                             <constraint firstItem="Tlh-IL-O9D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="dKz-Bc-ry5"/>
                             <constraint firstItem="ow6-kb-PM6" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="0.708683" id="fmr-TJ-Jvp"/>
                             <constraint firstAttribute="trailing" secondItem="ow6-kb-PM6" secondAttribute="trailing" constant="20" id="qXA-OL-vsQ"/>
                             <constraint firstItem="ow6-kb-PM6" firstAttribute="trailing" secondItem="ym8-MT-5cX" secondAttribute="trailing" id="quh-u8-gEr"/>
                             <constraint firstItem="Tlh-IL-O9D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="tPo-Lp-hh4"/>
+                            <constraint firstItem="obL-sv-DFx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="zXL-hp-JdS"/>
                         </constraints>
                     </view>
                     <connections>

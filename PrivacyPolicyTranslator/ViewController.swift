@@ -57,8 +57,77 @@ class ViewController: NSViewController {
         if let stringData = stringToSave.data(using: .utf8) {
             try? stringData.write(to: path)
         }
-       print("File Saved: ", path)
+       //print("File Saved: ", path)
        // print("api key:", apiKey)
         
+        
+        //Translation:
+//        SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
+//          if let t = text {
+//            print(t)
+//          }
+//        }
+//        SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
+//          if let t = text {
+//            print(t)
+//          }
+//        }
+  
+        
+//        SwiftGoogleTranslate.shared.detect("¡Hola!") { (detections, error) in
+//          if let detections = detections {
+//            for detection in detections {
+//              //print(detection.language)
+//              //print(detection.isReliable)
+//              //print(detection.confidence)
+//              print("---")
+//            }
+//          }
+//        }
+        
     }
-}
+    
+    
+    @IBAction func callAPI(_ sender: Any) {
+        
+            //Translation:
+
+//            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
+//              if let t = text {
+//                print(t)
+//              }
+//            }
+                
+//            //Detection:
+//
+//            SwiftGoogleTranslate.shared.detect("¡Hola!") { (detections, error) in
+//              if let detections = detections {
+//                for detection in detections {
+//                  print(detection.language)
+//                  print(detection.isReliable)
+//                  print(detection.confidence)
+//                  print("---")
+//                }
+//              }
+//            }
+//
+//            //A list of languages:
+//
+//            SwiftGoogleTranslate.shared.languages { (languages, error) in
+//              if let languages = languages {
+//                for language in languages {
+//                  print(language.language)
+//                  print(language.name)
+//                  print("---")
+//                }
+//              }
+//            }
+        
+    }
+    
+    
+    
+    
+    
+    
+}// Last One

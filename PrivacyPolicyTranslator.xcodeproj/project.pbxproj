@@ -44,7 +44,6 @@
 		335C65BF27911406000B8C7A = {
 			isa = PBXGroup;
 			children = (
-				330F37AA2792572E0063E436 /* .gitignore */,
 				335C65CA27911406000B8C7A /* PrivacyPolicyTranslator */,
 				335C65C927911406000B8C7A /* Products */,
 			);
@@ -61,11 +60,12 @@
 		335C65CA27911406000B8C7A /* PrivacyPolicyTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				330F37AA2792572E0063E436 /* .gitignore */,
 				335C65CB27911406000B8C7A /* AppDelegate.swift */,
-				335C65CD27911406000B8C7A /* ViewController.swift */,
 				335C65DA27914D6D000B8C7A /* html_strings.swift */,
-				335C65CF27911408000B8C7A /* Assets.xcassets */,
 				335C65D127911408000B8C7A /* Main.storyboard */,
+				335C65CF27911408000B8C7A /* Assets.xcassets */,
+				335C65CD27911406000B8C7A /* ViewController.swift */,
 				330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */,
 				330F37A727923B430063E436 /* Secret.plist */,
 				335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */,
