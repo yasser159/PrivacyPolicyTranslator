@@ -5,9 +5,7 @@
 //  Created by Maxim on 10/29/18.
 //  Copyright © 2018 Maksym Bilan. All rights reserved.
 //
-
 import Foundation
-
 
 /// A helper class for using Google Translate API.
 public class SwiftGoogleTranslate {
@@ -17,10 +15,10 @@ public class SwiftGoogleTranslate {
             guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
                     fatalError("Couldn't find file 'Config.plist'.")
         }
-     
+
             let plist = NSDictionary(contentsOfFile: filePath)
-            guard let value = plist?.object(forKey: "API-Key") as? String else {
-                    fatalError("Couldn't find key 'API-Key' in 'Secret.plist'.")
+            guard let value = plist?.object(forKey: "API_KEY") as? String else {
+                    fatalError("Couldn't find key 'API_KEY' in 'Secret.plist'.")
             }
             return value
         }
@@ -68,7 +66,7 @@ public class SwiftGoogleTranslate {
 	}
 	
 	/// API key.
-	//private var apiKey: String!
+//	private var apiKey: String!
 	/// Default URL session.
 	private let session = URLSession(configuration: .default)
 	
@@ -83,6 +81,7 @@ public class SwiftGoogleTranslate {
     
 	public func start(with apiKey: String) {
 		//self.apiKey = apiKey
+        //self.apiKey = apiKey
 	}
 	
 	/**

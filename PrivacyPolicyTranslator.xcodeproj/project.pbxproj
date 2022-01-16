@@ -10,6 +10,7 @@
 		330F37A127916C1B0063E436 /* SwiftGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */; };
 		330F37A827923B430063E436 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 330F37A727923B430063E436 /* Secret.plist */; };
 		330F37AB2792572E0063E436 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 330F37AA2792572E0063E436 /* .gitignore */; };
+		330F37AD2793D0F40063E436 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F37AC2793D0F40063E436 /* ApiKey.swift */; };
 		335C65CC27911406000B8C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65CB27911406000B8C7A /* AppDelegate.swift */; };
 		335C65CE27911406000B8C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65CD27911406000B8C7A /* ViewController.swift */; };
 		335C65D027911408000B8C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C65CF27911408000B8C7A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGoogleTranslate.swift; sourceTree = "<group>"; };
 		330F37A727923B430063E436 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
 		330F37AA2792572E0063E436 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		330F37AC2793D0F40063E436 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		335C65C827911406000B8C7A /* PrivacyPolicyTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyPolicyTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335C65CB27911406000B8C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		335C65CD27911406000B8C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				335C65CF27911408000B8C7A /* Assets.xcassets */,
 				335C65CD27911406000B8C7A /* ViewController.swift */,
 				330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */,
+				330F37AC2793D0F40063E436 /* ApiKey.swift */,
 				330F37A727923B430063E436 /* Secret.plist */,
 				335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */,
 			);
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330F37AD2793D0F40063E436 /* ApiKey.swift in Sources */,
 				335C65CE27911406000B8C7A /* ViewController.swift in Sources */,
 				330F37A127916C1B0063E436 /* SwiftGoogleTranslate.swift in Sources */,
 				335C65DB27914D6D000B8C7A /* html_strings.swift in Sources */,

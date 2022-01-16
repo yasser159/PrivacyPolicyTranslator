@@ -6,21 +6,24 @@
 //
 
 import Cocoa
+import SwiftUI
 
 class ViewController: NSViewController {
 
     @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
+    @IBOutlet weak var txt_ApiKey: NSTextField!
+    @IBOutlet weak var lbl_ApiKey: NSTextField!
     
     private var apiKey: String {
         get {
             guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
                     fatalError("Couldn't find file 'Config.plist'.")
         }
-     
+
             let plist = NSDictionary(contentsOfFile: filePath)
-            guard let value = plist?.object(forKey: "API-Key") as? String else {
-                    fatalError("Couldn't find key 'API-Key' in 'Secret.plist'.")
+            guard let value = plist?.object(forKey: "API_KEY") as? String else {
+                    fatalError("Couldn't find key 'API_KEY' in 'Secret.plist'.")
             }
             return value
         }
@@ -90,13 +93,19 @@ class ViewController: NSViewController {
     
     @IBAction func callAPI(_ sender: Any) {
         
+        //SwiftGoogleTranslate.shared.start(with: apiKey)
+
+        
+        SwiftGoogleTranslate.shared.start(with: apiKey)
+        
+        
             //Translation:
 
-//            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
-//              if let t = text {
-//                print(t)
-//              }
-//            }
+            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
+              if let t = text {
+                print(t)
+              }
+            }
                 
 //            //Detection:
 //
@@ -112,7 +121,7 @@ class ViewController: NSViewController {
 //            }
 //
 //            //A list of languages:
-//
+
 //            SwiftGoogleTranslate.shared.languages { (languages, error) in
 //              if let languages = languages {
 //                for language in languages {
@@ -126,8 +135,10 @@ class ViewController: NSViewController {
     }
     
     
+
     
     
     
     
+
 }// Last One
