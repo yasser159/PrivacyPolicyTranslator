@@ -4,8 +4,7 @@
 //
 //  Created by Yasser Hajlaoui on 1/13/22.
 //
-
-import Cocoa
+//import Cocoa
 import SwiftUI
 
 class ViewController: NSViewController {
@@ -14,7 +13,10 @@ class ViewController: NSViewController {
     @IBOutlet weak var btn_generateFiles: NSButton!
     @IBOutlet weak var txt_ApiKey: NSTextField!
     @IBOutlet weak var lbl_ApiKey: NSTextField!
+    @IBOutlet weak var lbl_Label: NSTextField!
     
+    var languages = [String]()
+
     private var apiKey: String {
         get {
             guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
@@ -32,24 +34,39 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func CheckBoxManager(_ sender: NSButton) {
+        
+        print(sender.alternateTitle)
+        
+        switch sender.state {
+        case .on:
+            languages.append(sender.alternateTitle)
+        case .off:
+            while let idx = languages.index(of:sender.alternateTitle) {
+                languages.remove(at: idx)
+            }
+            
+        case .mixed:
+            print("mixed")
+        default: break
+        }
+
+        print("languages: ", languages)
+        
+    }
+    
+    
+    
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
     }
 
-    func dialogOKCancel(question: String, text: String) -> Bool {
-        let alert = NSAlert()
-        alert.messageText = question
-        alert.informativeText = text
-        alert.alertStyle = .warning
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
-        return alert.runModal() == .alertFirstButtonReturn
-    }
+
     
     @IBAction func GenerateFiles(_ sender: Any) {
                 
@@ -142,3 +159,19 @@ class ViewController: NSViewController {
     
 
 }// Last One
+
+
+
+
+
+
+
+//func dialogOKCancel(question: String, text: String) -> Bool {
+//    let alert = NSAlert()
+//    alert.messageText = question
+//    alert.informativeText = text
+//    alert.alertStyle = .warning
+//    alert.addButton(withTitle: "OK")
+//    alert.addButton(withTitle: "Cancel")
+//    return alert.runModal() == .alertFirstButtonReturn
+//}

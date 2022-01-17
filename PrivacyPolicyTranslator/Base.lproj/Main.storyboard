@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PrivacyPolicyTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="657" height="479"/>
+                        <rect key="frame" x="0.0" y="0.0" width="545" height="479"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6">
-                                <rect key="frame" x="20" y="36" width="617" height="347"/>
+                                <rect key="frame" x="20" y="36" width="505" height="219"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="253" id="JqO-mj-vnu"/>
                                 </constraints>
@@ -722,14 +722,14 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
-                                <rect key="frame" x="18" y="391" width="281" height="16"/>
+                                <rect key="frame" x="18" y="263" width="281" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Text Here:" id="nCG-VA-1g9">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obL-sv-DFx">
+                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obL-sv-DFx">
                                 <rect key="frame" x="13" y="1" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hFS-7c-qzI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -739,18 +739,8 @@
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
-                                <rect key="frame" x="554" y="1" width="90" height="32"/>
-                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
-                                </connections>
-                            </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-vJ-8ss">
-                                <rect key="frame" x="20" y="426" width="617" height="21"/>
+                                <rect key="frame" x="20" y="426" width="505" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="HLf-SN-4EW">
                                     <font key="font" metaFont="system"/>
@@ -776,6 +766,82 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SpC-Tr-UsH">
+                                <rect key="frame" x="23" y="397" width="65" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="English" alternateTitle="en" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v9J-cV-qxv">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="COx-uz-yI2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAw-bq-1LR">
+                                <rect key="frame" x="113" y="399" width="68" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="French" alternateTitle="fr" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cjA-MY-47c">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="ida-UW-iPE"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-WD-3of">
+                                <rect key="frame" x="23" y="352" width="75" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Chinese" alternateTitle="zh-CN" bezelStyle="regularSquare" imagePosition="left" inset="2" id="uvV-6l-05m">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="HPx-1y-CXS"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-Pk-XvP">
+                                <rect key="frame" x="23" y="375" width="65" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Arabic" alternateTitle="ar" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jKS-aT-BPG">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="rzC-Pe-Lqa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="url-K3-bCM">
+                                <rect key="frame" x="113" y="377" width="75" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Spanish" alternateTitle="es" bezelStyle="regularSquare" imagePosition="left" inset="2" id="IQ3-m6-Olw">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="VYL-gA-CQ4"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vm-Fh-1Am">
+                                <rect key="frame" x="113" y="352" width="58" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Hindi" alternateTitle="hi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x2u-EC-KSp">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="Sq2-fF-Wqc"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
+                                <rect key="frame" x="442" y="1" width="90" height="32"/>
+                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ym8-MT-5cX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="7Cq-FE-fBI"/>
@@ -805,7 +871,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.5" y="693.5"/>
+            <point key="canvasLocation" x="101.5" y="693.5"/>
         </scene>
     </scenes>
 </document>
