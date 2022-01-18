@@ -11,7 +11,7 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
-    
+
     var languages = [String]()
 
     private var apiKey: String {
@@ -30,25 +30,25 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
-        
-        print(sender.alternateTitle)
+
+        let languageCode = getLanguageCode[sender.title] ?? "en"
+        print("CheckBox Title: ", languageCode)
         
         switch sender.state {
         case .on:
-            languages.append(sender.alternateTitle)
+            languages.append(languageCode)
         case .off:
-            while let idx = languages.firstIndex(of:sender.alternateTitle) {
+            while let idx = languages.firstIndex(of: languageCode) {
                 languages.remove(at: idx)
             }
         case .mixed:
             print("mixed")
         default: break
         }
-        //print("languages: ", languages)
+        print("languages: ", languages)
     }
     
     override var representedObject: Any? {
