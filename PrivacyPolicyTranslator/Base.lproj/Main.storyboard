@@ -711,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <gridView fixedFrame="YES" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-6d-j0h">
-                                <rect key="frame" x="461" y="471" width="270" height="126"/>
+                                <rect key="frame" x="477" y="478" width="270" height="126"/>
                                 <rows>
                                     <gridRow id="0Uh-g2-VQV"/>
                                     <gridRow id="HAG-Bb-X4a"/>
@@ -781,6 +781,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="f1K-KK-2YI"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="HAG-Bb-X4a" column="CGI-E2-pLn" id="haJ-rt-i0s">
@@ -814,6 +817,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="ZaH-1U-kQJ"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="kP3-EM-bDU" column="CGI-E2-pLn" id="Rcs-RH-bId">
@@ -823,6 +829,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="vKQ-d8-gRJ"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="nO7-Hy-qCg" column="yso-Ip-TCa" id="vR7-Wh-BbQ">
@@ -832,6 +841,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="K91-GD-0yO"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="nO7-Hy-qCg" column="7Mu-uo-xtO" id="SIS-M3-84t"/>
@@ -843,6 +855,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="gbt-yW-Qbs"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="ElZ-U8-w8n" column="7Mu-uo-xtO" id="Nh4-Ex-hKW"/>
@@ -854,34 +869,35 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="CheckBoxManager:" target="XfG-lQ-9wD" id="k7m-Xi-sdc"/>
+                                            </connections>
                                         </button>
                                     </gridCell>
                                     <gridCell row="aHE-4I-5qK" column="7Mu-uo-xtO" id="jRg-js-xMj"/>
                                     <gridCell row="aHE-4I-5qK" column="CGI-E2-pLn" id="KWl-Yy-VIa"/>
                                 </gridCells>
                             </gridView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
+                                <rect key="frame" x="20" y="478" width="170" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Privacy Policy HTML:" id="nCG-VA-1g9">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6">
-                                <rect key="frame" x="22" y="71" width="718" height="392"/>
+                                <rect key="frame" x="22" y="40" width="725" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="g4D-Kc-GFy">
-                                    <font key="font" metaFont="system" size="9"/>
+                                    <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-cq-wU9">
-                                <rect key="frame" x="127" y="25" width="82" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4VK-hD-wZ1">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <action selector="callAPI:" target="XfG-lQ-9wD" id="QLH-ly-pvd"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
-                                <rect key="frame" x="13" y="25" width="90" height="32"/>
+                                <rect key="frame" x="13" y="5" width="129" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -891,20 +907,41 @@
                                     <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
-                                <rect key="frame" x="20" y="471" width="170" height="16"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-ES-c7Z">
+                                <rect key="frame" x="20" y="588" width="205" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Privacy Policy HTML:" id="nCG-VA-1g9">
-                                    <font key="font" usesAppearanceFont="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Output Files Prefix" id="h74-SA-2hB">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-oo-LoR">
+                                <rect key="frame" x="22" y="559" width="316" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="ag8-an-Wv5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-cq-wU9">
+                                <rect key="frame" x="154" y="5" width="121" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4VK-hD-wZ1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="callAPI:" target="XfG-lQ-9wD" id="QLH-ly-pvd"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btn_generateFiles" destination="ym8-MT-5cX" id="XWb-wm-AT0"/>
                         <outlet property="txt_Input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
+                        <outlet property="txt_filePrefix" destination="cOX-oo-LoR" id="Azo-W2-8gk"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

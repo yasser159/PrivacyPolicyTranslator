@@ -4,14 +4,14 @@
 //
 //  Created by Yasser Hajlaoui on 1/13/22.
 //
-//import Cocoa
 import SwiftUI
 
 class ViewController: NSViewController {
 
     @IBOutlet weak var txt_Input: NSTextField!
+    @IBOutlet weak var txt_filePrefix: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
-
+    
     var languages = [String]()
 
     private var apiKey: String {
@@ -19,7 +19,6 @@ class ViewController: NSViewController {
             guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
                     fatalError("Couldn't find file 'Config.plist'.")
         }
-
             let plist = NSDictionary(contentsOfFile: filePath)
             guard let value = plist?.object(forKey: "API_KEY") as? String else {
                     fatalError("Couldn't find key 'API_KEY' in 'Secret.plist'.")
@@ -73,15 +72,6 @@ class ViewController: NSViewController {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func GenerateFiles(_ sender: Any) {
                 
         let stringToSave = Html_Top + txt_Input.stringValue + Html_Bottom
@@ -91,32 +81,8 @@ class ViewController: NSViewController {
         if let stringData = stringToSave.data(using: .utf8) {
             try? stringData.write(to: path)
         }
-        
     }
-    
-    
-
-
-
 }// Last One
-
-
-
-
-
-
-
-//func dialogOKCancel(question: String, text: String) -> Bool {
-//    let alert = NSAlert()
-//    alert.messageText = question
-//    alert.informativeText = text
-//    alert.alertStyle = .warning
-//    alert.addButton(withTitle: "OK")
-//    alert.addButton(withTitle: "Cancel")
-//    return alert.runModal() == .alertFirstButtonReturn
-//}
-
-
 
 //Translation:
 
