@@ -11,9 +11,6 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
-    @IBOutlet weak var txt_ApiKey: NSTextField!
-    @IBOutlet weak var lbl_ApiKey: NSTextField!
-    @IBOutlet weak var lbl_Label: NSTextField!
     
     var languages = [String]()
 
@@ -44,29 +41,46 @@ class ViewController: NSViewController {
         case .on:
             languages.append(sender.alternateTitle)
         case .off:
-            while let idx = languages.index(of:sender.alternateTitle) {
+            while let idx = languages.firstIndex(of:sender.alternateTitle) {
                 languages.remove(at: idx)
             }
-            
         case .mixed:
             print("mixed")
         default: break
         }
-
-        print("languages: ", languages)
-        
+        //print("languages: ", languages)
     }
-    
-    
-    
     
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
     }
+    
+    @IBAction func callAPI(_ sender: Any) {
 
-
+        SwiftGoogleTranslate.shared.start(with: apiKey)
+        
+        for languageCode in languages {
+            //print(languageCode)
+            
+            //Dynamic Translation:
+            SwiftGoogleTranslate.shared.translate(txt_Input.stringValue, languageCode, "en") { (text, error) in
+              if let t = text {
+                print(t)
+              }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func GenerateFiles(_ sender: Any) {
                 
@@ -77,53 +91,41 @@ class ViewController: NSViewController {
         if let stringData = stringToSave.data(using: .utf8) {
             try? stringData.write(to: path)
         }
-       //print("File Saved: ", path)
-       // print("api key:", apiKey)
-        
-        
-        //Translation:
-//        SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
-//          if let t = text {
-//            print(t)
-//          }
-//        }
-//        SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
-//          if let t = text {
-//            print(t)
-//          }
-//        }
-  
-        
-//        SwiftGoogleTranslate.shared.detect("¡Hola!") { (detections, error) in
-//          if let detections = detections {
-//            for detection in detections {
-//              //print(detection.language)
-//              //print(detection.isReliable)
-//              //print(detection.confidence)
-//              print("---")
-//            }
-//          }
-//        }
         
     }
     
     
-    @IBAction func callAPI(_ sender: Any) {
-        
-        //SwiftGoogleTranslate.shared.start(with: apiKey)
 
-        
-        SwiftGoogleTranslate.shared.start(with: apiKey)
-        
-        
-            //Translation:
 
-            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
-              if let t = text {
-                print(t)
-              }
-            }
-                
+
+}// Last One
+
+
+
+
+
+
+
+//func dialogOKCancel(question: String, text: String) -> Bool {
+//    let alert = NSAlert()
+//    alert.messageText = question
+//    alert.informativeText = text
+//    alert.alertStyle = .warning
+//    alert.addButton(withTitle: "OK")
+//    alert.addButton(withTitle: "Cancel")
+//    return alert.runModal() == .alertFirstButtonReturn
+//}
+
+
+
+//Translation:
+
+//            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
+//              if let t = text {
+//                print(t)
+//              }
+//            }
+    
 //            //Detection:
 //
 //            SwiftGoogleTranslate.shared.detect("¡Hola!") { (detections, error) in
@@ -148,30 +150,3 @@ class ViewController: NSViewController {
 //                }
 //              }
 //            }
-        
-    }
-    
-    
-
-    
-    
-    
-    
-
-}// Last One
-
-
-
-
-
-
-
-//func dialogOKCancel(question: String, text: String) -> Bool {
-//    let alert = NSAlert()
-//    alert.messageText = question
-//    alert.informativeText = text
-//    alert.alertStyle = .warning
-//    alert.addButton(withTitle: "OK")
-//    alert.addButton(withTitle: "Cancel")
-//    return alert.runModal() == .alertFirstButtonReturn
-//}
