@@ -8,10 +8,11 @@ import SwiftUI
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var txt_Input: NSTextField!
+    @IBOutlet weak var txt_input: NSTextField!
     @IBOutlet weak var txt_filePrefix: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
     
+    var languageCode = ""
     var languages = [String]()
 
     private var apiKey: String {
@@ -32,9 +33,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
-
-        let languageCode = getLanguageCode[sender.title] ?? "en"
-        print("CheckBox Title: ", languageCode)
+        languageCode = getLanguageCode[sender.title] ?? "en"
         
         switch sender.state {
         case .on:
@@ -47,42 +46,50 @@ class ViewController: NSViewController {
             print("mixed")
         default: break
         }
-        print("languages: ", languages)
     }
     
     override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+        didSet {  // Update the view, if already loaded.
         }
     }
     
-    @IBAction func callAPI(_ sender: Any) {
-
+@IBAction func GenerateFiles(_ sender: Any) {
+//Translate
+    for languageCode in languages {
+        var  translatedText = ""
         SwiftGoogleTranslate.shared.start(with: apiKey)
-        
-        for languageCode in languages {
-            //print(languageCode)
-            
-            //Dynamic Translation:
-            SwiftGoogleTranslate.shared.translate(txt_Input.stringValue, languageCode, "en") { (text, error) in
-              if let t = text {
+        SwiftGoogleTranslate.shared.translate( txt_input.stringValue, languageCode, "en") { (text, error) in
+            if let t = text {
+                translatedText = t
                 print(t)
-              }
+
+                let stringToSave = getHtml(languageCode: languageCode, contentBody: translatedText)
+                let path = FileManager.default.urls(for: .downloadsDirectory,
+                in: .userDomainMask)[0].appendingPathComponent("Prefix_" + languageCode + ".html")
+
+                    if let stringData = stringToSave.data(using: .utf8) {
+                    try? stringData.write(to: path)
+                    }
             }
         }
     }
+}
     
-    @IBAction func GenerateFiles(_ sender: Any) {
-                
-        let stringToSave = Html_Top + txt_Input.stringValue + Html_Bottom
-        let path = FileManager.default.urls(for: .downloadsDirectory,
-                                            in: .userDomainMask)[0].appendingPathComponent("generated.html")
 
-        if let stringData = stringToSave.data(using: .utf8) {
-            try? stringData.write(to: path)
-        }
-    }
+
+    
+    
+    
+    
+    
 }// Last One
+
+
+
+
+
+
+
 
 //Translation:
 

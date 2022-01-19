@@ -684,8 +684,8 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Privacy Policy Localization" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -700,18 +700,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="23" y="1325"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PrivacyPolicyTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="767" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="643" height="617"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <gridView fixedFrame="YES" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-6d-j0h">
-                                <rect key="frame" x="477" y="478" width="270" height="126"/>
+                                <rect key="frame" x="353" y="478" width="270" height="126"/>
                                 <rows>
                                     <gridRow id="0Uh-g2-VQV"/>
                                     <gridRow id="HAG-Bb-X4a"/>
@@ -729,7 +729,7 @@
                                     <gridCell row="0Uh-g2-VQV" column="yso-Ip-TCa" id="u3r-nL-59T">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SpC-Tr-UsH" userLabel="nagliz">
                                             <rect key="frame" x="-2" y="109" width="70" height="18"/>
-                                            <buttonCell key="cell" type="check" title="English" alternateTitle="en" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v9J-cV-qxv">
+                                            <buttonCell key="cell" type="check" title="English" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v9J-cV-qxv">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -741,7 +741,7 @@
                                     <gridCell row="0Uh-g2-VQV" column="7Mu-uo-xtO" id="eZx-On-yoR">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-WD-3of">
                                             <rect key="frame" x="98" y="109" width="75" height="18"/>
-                                            <buttonCell key="cell" type="check" title="Chinese" alternateTitle="zh-CN" bezelStyle="regularSquare" imagePosition="left" inset="2" id="uvV-6l-05m">
+                                            <buttonCell key="cell" type="check" title="Chinese" bezelStyle="regularSquare" imagePosition="left" inset="2" id="uvV-6l-05m">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -753,7 +753,7 @@
                                     <gridCell row="0Uh-g2-VQV" column="CGI-E2-pLn" id="rry-78-75W">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-Pk-XvP">
                                             <rect key="frame" x="186" y="109" width="65" height="18"/>
-                                            <buttonCell key="cell" type="check" title="Arabic" alternateTitle="ar" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jKS-aT-BPG">
+                                            <buttonCell key="cell" type="check" title="Arabic" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jKS-aT-BPG">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -765,7 +765,7 @@
                                     <gridCell row="HAG-Bb-X4a" column="yso-Ip-TCa" id="DAP-6C-7fb">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YAw-bq-1LR">
                                             <rect key="frame" x="-2" y="87" width="68" height="18"/>
-                                            <buttonCell key="cell" type="check" title="French" alternateTitle="fr" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cjA-MY-47c">
+                                            <buttonCell key="cell" type="check" title="French" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cjA-MY-47c">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -789,7 +789,7 @@
                                     <gridCell row="HAG-Bb-X4a" column="CGI-E2-pLn" id="haJ-rt-i0s">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2vm-Fh-1Am">
                                             <rect key="frame" x="186" y="87" width="58" height="18"/>
-                                            <buttonCell key="cell" type="check" title="Hindi" alternateTitle="hi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x2u-EC-KSp">
+                                            <buttonCell key="cell" type="check" title="Hindi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x2u-EC-KSp">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -801,7 +801,7 @@
                                     <gridCell row="kP3-EM-bDU" column="yso-Ip-TCa" id="M0Y-m6-wFN">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="url-K3-bCM">
                                             <rect key="frame" x="-2" y="65" width="75" height="18"/>
-                                            <buttonCell key="cell" type="check" title="Spanish" alternateTitle="es" bezelStyle="regularSquare" imagePosition="left" inset="2" id="IQ3-m6-Olw">
+                                            <buttonCell key="cell" type="check" title="Spanish" bezelStyle="regularSquare" imagePosition="left" inset="2" id="IQ3-m6-Olw">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -887,17 +887,17 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6">
-                                <rect key="frame" x="22" y="40" width="725" height="430"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6" userLabel="txt_Input">
+                                <rect key="frame" x="22" y="40" width="601" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="g4D-Kc-GFy">
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" allowsEditingTextAttributes="YES" bezelStyle="round" id="g4D-Kc-GFy">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
-                                <rect key="frame" x="13" y="5" width="129" height="32"/>
+                                <rect key="frame" x="501" y="5" width="129" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -908,40 +908,47 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-ES-c7Z">
-                                <rect key="frame" x="20" y="588" width="205" height="16"/>
+                                <rect key="frame" x="20" y="531" width="205" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Output Files Prefix" id="h74-SA-2hB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Output Prefix" id="h74-SA-2hB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-oo-LoR">
-                                <rect key="frame" x="22" y="559" width="316" height="21"/>
+                                <rect key="frame" x="22" y="502" width="316" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="ag8-an-Wv5">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="ag8-an-Wv5">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-cq-wU9">
-                                <rect key="frame" x="154" y="5" width="121" height="32"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5t-Us-wAV">
+                                <rect key="frame" x="20" y="588" width="97" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4VK-hD-wZ1">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Google API Key" id="CNH-7h-Fxz">
                                     <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <action selector="callAPI:" target="XfG-lQ-9wD" id="QLH-ly-pvd"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-Yz-b6b">
+                                <rect key="frame" x="22" y="559" width="316" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="pnQ-hf-v7a">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btn_generateFiles" destination="ym8-MT-5cX" id="XWb-wm-AT0"/>
-                        <outlet property="txt_Input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
                         <outlet property="txt_filePrefix" destination="cOX-oo-LoR" id="Azo-W2-8gk"/>
+                        <outlet property="txt_input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -949,27 +956,13 @@
                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                     <font key="font" metaFont="system"/>
                 </buttonCell>
-                <buttonCell type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7IO-Fg-zJ2">
-                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                    <font key="font" metaFont="system"/>
-                    <connections>
-                        <action selector="callAPI:" target="XfG-lQ-9wD" id="QoN-jd-I98"/>
-                    </connections>
-                </buttonCell>
                 <textFieldCell selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="479-dr-36S">
                     <font key="font" metaFont="system"/>
                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                 </textFieldCell>
-                <buttonCell type="push" title="Call API" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YjN-79-k8B">
-                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                    <font key="font" metaFont="system"/>
-                    <connections>
-                        <action selector="callAPI:" target="XfG-lQ-9wD" id="3GY-qX-yvp"/>
-                    </connections>
-                </buttonCell>
             </objects>
-            <point key="canvasLocation" x="157.5" y="758.5"/>
+            <point key="canvasLocation" x="95.5" y="758.5"/>
         </scene>
     </scenes>
 </document>
