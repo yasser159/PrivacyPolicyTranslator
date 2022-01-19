@@ -23,13 +23,14 @@ func getHtml(languageCode: String, contentBody: String) -> String {
       </head>
       <body>
     
-    <Center><table style="width:100%">
+    <Center>
+    <table style="width:100%">
       <tr>
-        <td></td>
+        <td style="width:20%"></td>
         <td>
 """ + contentBody + """
     </td>
-        <td></td>
+        <td style="width:20%"></td>
       </tr>
     </table></center>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

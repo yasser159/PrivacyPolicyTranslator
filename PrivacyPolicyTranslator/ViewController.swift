@@ -31,8 +31,8 @@ class ViewController: NSViewController {
     }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
-        //laguage = sender.title
-       let  languageCode = getLanguageCode[sender.title] ?? "en"
+
+       let  languageCode = dict_languageCodes[sender.title] ?? "en"
         
         switch sender.state {
         case .on:
@@ -53,65 +53,37 @@ class ViewController: NSViewController {
     }
     
 @IBAction func GenerateFiles(_ sender: Any) {
-        
-   let filePrefix = txt_filePrefix.stringValue
-
+   
     for languageCode in languages {
-        SwiftGoogleTranslate.shared.start(with: apiKey)
-        SwiftGoogleTranslate.shared.translate(txt_input.stringValue, languageCode, "en") { (text, error) in
-            if let translatedText = text {
-                let stringToSave = getHtml(languageCode: languageCode, contentBody: translatedText)
-                let path = FileManager.default.urls(for: .downloadsDirectory,
-                in: .userDomainMask)[0].appendingPathComponent(filePrefix + "-" + languageCode + ".html")
-                if let stringData = stringToSave.data(using: .utf8) {
-                    try? stringData.write(to: path)
-                    }
+        
+        if languageCode == "en" {
+            saveTranslationToFile(prefix: self.txt_filePrefix.stringValue, languageCode: languageCode, translatedText: txt_input.stringValue )
+        } else {
+            SwiftGoogleTranslate.shared.start(with: apiKey)
+            SwiftGoogleTranslate.shared.translate(txt_input.stringValue, languageCode, "en") { (text, error) in
+                if let translatedText = text {
+                    let filePrefix = self.txt_filePrefix.stringValue
+                    self.saveTranslationToFile(prefix: filePrefix, languageCode: languageCode, translatedText: translatedText)
+                }
             }
         }
     }
 }
 
-}// Last One
-
-
-
-
-
-
-
-
-//Translation:
-
-//            SwiftGoogleTranslate.shared.translate("Hello!", "es", "en") { (text, error) in
-//              if let t = text {
-//                print(t)
-//              }
-//            }
+    func saveTranslationToFile(prefix: String, languageCode: String, translatedText: String ){
+        
+        let myLanguage    = dict_languageCodes.someKey(forValue: languageCode) ?? "Default"
+        let stringToSave  = getHtml(languageCode: languageCode, contentBody: translatedText)
+        let fileName      = prefix + "-" + myLanguage + ".html"
+        let path          = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0].appendingPathComponent(fileName)
+        if let stringData = stringToSave.data(using: .utf8) {
+                                try? stringData.write(to: path)
+                            }
+    }
     
-//            //Detection:
-//
-//            SwiftGoogleTranslate.shared.detect("¡Hola!") { (detections, error) in
-//              if let detections = detections {
-//                for detection in detections {
-//                  print(detection.language)
-//                  print(detection.isReliable)
-//                  print(detection.confidence)
-//                  print("---")
-//                }
-//              }
-//            }
-//
-//            //A list of languages:
-
-//            SwiftGoogleTranslate.shared.languages { (languages, error) in
-//              if let languages = languages {
-//                for language in languages {
-//                  print(language.language)
-//                  print(language.name)
-//                  print("---")
-//                }
-//              }
-//            }
-
-
-
+}// Last Bracket
+extension Dictionary where Value: Equatable {
+    func someKey(forValue val: Value) -> Key? {
+        return first(where: { $1 == val })?.key
+    }
+}

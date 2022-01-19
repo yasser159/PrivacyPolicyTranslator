@@ -8,7 +8,7 @@
 import Foundation
 
 
-var getLanguageCode = ["English": "en",
+var dict_languageCodes = ["English": "en",
                        "French": "fr",
                        "Chinese": "zh-CN",
                        "Spanish": "es",
@@ -21,3 +21,8 @@ var getLanguageCode = ["English": "en",
                        "Russian": "ru",
                        "Greek": "el",
                        "German": "de"]
+
+
+
+
+//Not Working: spanish, German
