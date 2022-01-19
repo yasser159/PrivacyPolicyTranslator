@@ -11,8 +11,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var txt_input: NSTextField!
     @IBOutlet weak var txt_filePrefix: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
-    
-    var languageCode = ""
     var languages = [String]()
 
     private var apiKey: String {
@@ -33,7 +31,8 @@ class ViewController: NSViewController {
     }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
-        languageCode = getLanguageCode[sender.title] ?? "en"
+        //laguage = sender.title
+       let  languageCode = getLanguageCode[sender.title] ?? "en"
         
         switch sender.state {
         case .on:
@@ -43,7 +42,7 @@ class ViewController: NSViewController {
                 languages.remove(at: idx)
             }
         case .mixed:
-            print("mixed")
+            print("check Box was set to mixed")
         default: break
         }
     }
@@ -54,34 +53,24 @@ class ViewController: NSViewController {
     }
     
 @IBAction func GenerateFiles(_ sender: Any) {
-//Translate
-    for languageCode in languages {
-        var  translatedText = ""
-        SwiftGoogleTranslate.shared.start(with: apiKey)
-        SwiftGoogleTranslate.shared.translate( txt_input.stringValue, languageCode, "en") { (text, error) in
-            if let t = text {
-                translatedText = t
-                print(t)
+        
+   let filePrefix = txt_filePrefix.stringValue
 
+    for languageCode in languages {
+        SwiftGoogleTranslate.shared.start(with: apiKey)
+        SwiftGoogleTranslate.shared.translate(txt_input.stringValue, languageCode, "en") { (text, error) in
+            if let translatedText = text {
                 let stringToSave = getHtml(languageCode: languageCode, contentBody: translatedText)
                 let path = FileManager.default.urls(for: .downloadsDirectory,
-                in: .userDomainMask)[0].appendingPathComponent("Prefix_" + languageCode + ".html")
-
-                    if let stringData = stringToSave.data(using: .utf8) {
+                in: .userDomainMask)[0].appendingPathComponent(filePrefix + "-" + languageCode + ".html")
+                if let stringData = stringToSave.data(using: .utf8) {
                     try? stringData.write(to: path)
                     }
             }
         }
     }
 }
-    
 
-
-    
-    
-    
-    
-    
 }// Last One
 
 
@@ -123,3 +112,6 @@ class ViewController: NSViewController {
 //                }
 //              }
 //            }
+
+
+
