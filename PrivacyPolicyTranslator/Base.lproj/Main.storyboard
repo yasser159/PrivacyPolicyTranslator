@@ -890,7 +890,7 @@
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6" userLabel="txt_Input">
                                 <rect key="frame" x="22" y="40" width="601" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" allowsEditingTextAttributes="YES" bezelStyle="round" id="g4D-Kc-GFy">
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="g4D-Kc-GFy">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -910,7 +910,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-ES-c7Z">
                                 <rect key="frame" x="20" y="531" width="205" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Output Prefix" id="h74-SA-2hB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="File Output Prefix" id="h74-SA-2hB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -943,12 +943,25 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afw-IN-xlx">
+                                <rect key="frame" x="227" y="587" width="111" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Use Test Data" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zq3-gM-dPy">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="useTestDataClicked:" target="XfG-lQ-9wD" id="JWb-SD-jKO"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btn_generateFiles" destination="ym8-MT-5cX" id="XWb-wm-AT0"/>
                         <outlet property="txt_filePrefix" destination="cOX-oo-LoR" id="Azo-W2-8gk"/>
                         <outlet property="txt_input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
+                        <outlet property="useTestData" destination="Zq3-gM-dPy" id="b2U-iM-arY"/>
+                        <outlet property="useTestDataClicked" destination="afw-IN-xlx" id="o6u-In-2Rz"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -962,7 +975,7 @@
                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                 </textFieldCell>
             </objects>
-            <point key="canvasLocation" x="95.5" y="758.5"/>
+            <point key="canvasLocation" x="76" y="366"/>
         </scene>
     </scenes>
 </document>

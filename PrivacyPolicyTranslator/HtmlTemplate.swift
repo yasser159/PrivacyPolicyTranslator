@@ -43,7 +43,7 @@ func getHtml(languageCode: String, contentBody: String) -> String {
 
 
 
-let testData = """
+let Html_testData = """
     <strong>Privacy Policy</strong>
      <p>
         Yasser Hajlaoui built the Covid Vaccine Passport app as

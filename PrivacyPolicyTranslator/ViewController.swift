@@ -12,7 +12,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var txt_filePrefix: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
     var languages = [String]()
-
+    
+    @IBOutlet weak var useTestData: NSButtonCell!
+    
     private var apiKey: String {
         get {
             guard let filePath = Bundle.main.path(forResource: "Secret", ofType: "plist") else {
@@ -26,14 +28,27 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func useTestDataClicked(_ sender: Any) {
+        checkIf_UsingTestData()
+    }
+    
+    func checkIf_UsingTestData(){
+        if useTestData.state == .on {
+            txt_input.stringValue = Html_testData
+        }else {
+            txt_input.stringValue = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkIf_UsingTestData()
     }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
 
-       let  languageCode = dict_languageCodes[sender.title] ?? "en"
-        
+    let  languageCode = dict_languageCodes[sender.title] ?? "en"
         switch sender.state {
         case .on:
             languages.append(languageCode)
@@ -42,7 +57,7 @@ class ViewController: NSViewController {
                 languages.remove(at: idx)
             }
         case .mixed:
-            print("check Box was set to mixed")
+            print("check box was set to mixed")
         default: break
         }
     }
@@ -53,7 +68,7 @@ class ViewController: NSViewController {
     }
     
 @IBAction func GenerateFiles(_ sender: Any) {
-   
+        
     for languageCode in languages {
         
         if languageCode == "en" {
@@ -77,8 +92,8 @@ class ViewController: NSViewController {
         let fileName      = prefix + "-" + myLanguage + ".html"
         let path          = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0].appendingPathComponent(fileName)
         if let stringData = stringToSave.data(using: .utf8) {
-                                try? stringData.write(to: path)
-                            }
+                                                                try? stringData.write(to: path)
+                                                            }
     }
     
 }// Last Bracket
