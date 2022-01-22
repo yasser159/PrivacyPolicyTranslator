@@ -1,17 +1,15 @@
 //
 //  TextManipulationTools.swift
 //  PrivacyPolicyTranslator
-//
-//  Created by Yasser Hajlaoui on 1/21/22.
-//
+////this is a workaround google translate's 5000 Character limit
+/////  Created by Yasser Hajlaoui on 1/21/22.
 
 import Foundation
 
-//this is a workaround google translate's 5000 Character limit
 func paragraphsSplitter(input: String,characterLimit: Int, splitterString: String)->[String]{
 
     let inputText = input
-    var under5KWord = ""
+    var withinTreshhold = ""
     var myParaghraphs = [""]
     var components = inputText.components(separatedBy: splitterString) //Split The HTML Over </p> paraghraps
     
@@ -24,17 +22,15 @@ func paragraphsSplitter(input: String,characterLimit: Int, splitterString: Strin
 
     for paraghraph in components{
         
-        if ((under5KWord.count + paraghraph.count)<4500)
+        if ((withinTreshhold.count + paraghraph.count) < characterLimit)
         {
-            under5KWord += paraghraph
-        } else {//                               paragraph > 4500
-            myParaghraphs.append(under5KWord)
-            under5KWord = paraghraph
+            withinTreshhold += paraghraph
+        } else {//                               paragraph > characterLimit
+            myParaghraphs.append(withinTreshhold)
+            withinTreshhold = paraghraph
         }
     }
-    myParaghraphs.append(under5KWord)
-
-//                print("elements in myParaghraphs: ", myParaghraphs.count)
-//                print(myParaghraphs)
+    myParaghraphs.append(withinTreshhold)
+    
     return myParaghraphs
 }

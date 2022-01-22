@@ -37,38 +37,36 @@ class ViewController: NSViewController {
     func checkIf_UsingTestData(){
         if useTestData.state == .on {
             txt_input.stringValue = Html_testData
-            //processCheckboxes(language: "fr", checkBoxState: NSControl.StateValue.on)
-            //chkbx_french.state = NSControl.StateValue.on
         }else {
             txt_input.stringValue = ""
         }
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        checkIf_UsingTestData()
-    }
+            super.viewDidLoad()
+            checkIf_UsingTestData()
+        }
 
     @IBAction func CheckBoxManager(_ sender: NSButton) {
-        processCheckboxes(language: sender.title, checkBoxState: sender.state)
-    }
+            processCheckboxes(language: sender.title, checkBoxState: sender.state)
+        }
     
     func processCheckboxes(language: String, checkBoxState: NSControl.StateValue){
-        progressBar.doubleValue = 0.0
-        
-        let  languageCode = dict_languageCodes[language] ?? "en"
-            switch checkBoxState {
-            case .on:
-                languages.append(languageCode)
-            case .off:
-                while let idx = languages.firstIndex(of: languageCode) {
-                    languages.remove(at: idx)
+            progressBar.doubleValue = 0.0
+            
+            let  languageCode = dict_languageCodes[language] ?? "en"
+                switch checkBoxState {
+                case .on:
+                    languages.append(languageCode)
+                case .off:
+                    while let idx = languages.firstIndex(of: languageCode) {
+                        languages.remove(at: idx)
+                    }
+                case .mixed:
+                    print("check box was set to mixed")
+                default: break
                 }
-            case .mixed:
-                print("check box was set to mixed")
-            default: break
-            }
-    }
+        }
     
     override var representedObject: Any? {
         didSet {  // Update the view, if already loaded.
@@ -76,41 +74,39 @@ class ViewController: NSViewController {
     }
     
 @IBAction func GenerateFiles(_ sender: Any) {
+    
     SwiftGoogleTranslate.shared.start(with: apiKey)
+    progressBar.doubleValue = 0.0
+    let progress = Double(100/languages.count)
+    print("progressBar.doubleValue: ", progressBar.doubleValue )
+    
+    for languageCode in languages {
+       if languageCode == "en" {  //if english print and Exit, No translation needed
+           saveTranslationToFile(prefix: self.txt_filePrefix.stringValue, languageCode: languageCode, translatedText: txt_input.stringValue )
+       }
+       else{
+           let paragraphs = paragraphsSplitter(input: txt_input.stringValue,characterLimit: 4500,splitterString: "</p>")
+           var resultTranslation = ""
 
-   for languageCode in languages {
-               if languageCode == "en" {  //if english print and Exit, No translation needed
-                   saveTranslationToFile(prefix: self.txt_filePrefix.stringValue, languageCode: languageCode, translatedText: txt_input.stringValue )
-                   return
-               }
-       
-               let paragraphs = paragraphsSplitter(input: txt_input.stringValue,characterLimit: 4500,splitterString: "</p>")
-               var translatedTotal = ""
-               let progressBar_Increment = Double(100/paragraphs.count)
-               var progress = 0.0
-               progressBar.doubleValue = progress
+           for paraghraph in paragraphs {
+                                       SwiftGoogleTranslate.shared.translate(paraghraph, languageCode, "en") { (text, error) in
+                                           if let translatedText = text {
+                                             resultTranslation.append(contentsOf: translatedText)
+                                           }
+                                       }
 
-               for paraghraph in paragraphs {
-                   SwiftGoogleTranslate.shared.translate(paraghraph, languageCode, "en") { (text, error) in
-                                               if  let translatedText = text {
-                                                translatedTotal.append(contentsOf: translatedText)
-                                               }
-                                        }
-
-                   let second: Double = 1000000
-                   usleep(useconds_t(0.2 * second)) // Sleep for 200 milliseconds
-
-                   // Progress Bar Increments:
-                   progress += progressBar_Increment
-                   self.progressBar.doubleValue = progress
-                }
-
-        let filePrefix = self.txt_filePrefix.stringValue
-        self.saveTranslationToFile(prefix: filePrefix, languageCode: languageCode, translatedText: translatedTotal)
-
-       progress = 100.0
-       progressBar.doubleValue = progress
-    }
+               let second: Double = 1000000
+               usleep(useconds_t(0.2 * second)) // Sleep for 200 milliseconds
+            }
+           let filePrefix = self.txt_filePrefix.stringValue
+           self.saveTranslationToFile(prefix: filePrefix, languageCode: languageCode, translatedText: resultTranslation)
+           
+           progressBar.doubleValue = progressBar.doubleValue + progress
+           //progressBar.
+           print("progressBar.doubleValue: ", progressBar.doubleValue )
+       }
+   }
+    progressBar.doubleValue = 100.0
 }
 
     func saveTranslationToFile(prefix: String, languageCode: String, translatedText: String ){
@@ -120,8 +116,6 @@ class ViewController: NSViewController {
         let path          = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0].appendingPathComponent(fileName)
         if let stringData = stringToSave.data(using: .utf8) { try? stringData.write(to: path)}
     }
-    
-
     
 }// Last Bracket
 extension Dictionary where Value: Equatable {
