@@ -15,6 +15,7 @@
 		335C65D027911408000B8C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335C65CF27911408000B8C7A /* Assets.xcassets */; };
 		335C65D327911408000B8C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335C65D127911408000B8C7A /* Main.storyboard */; };
 		335C65DB27914D6D000B8C7A /* HtmlTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C65DA27914D6D000B8C7A /* HtmlTemplate.swift */; };
+		3365DACA279BE9E0005E222A /* TextManipulationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365DAC9279BE9E0005E222A /* TextManipulationTools.swift */; };
 		33FF3D4927973D8A00F40F3A /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FF3D4827973D8A00F40F3A /* LanguageCodes.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		335C65D227911408000B8C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		335C65D427911408000B8C7A /* PrivacyPolicyTranslator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrivacyPolicyTranslator.entitlements; sourceTree = "<group>"; };
 		335C65DA27914D6D000B8C7A /* HtmlTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlTemplate.swift; sourceTree = "<group>"; };
+		3365DAC9279BE9E0005E222A /* TextManipulationTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManipulationTools.swift; sourceTree = "<group>"; };
 		33FF3D4827973D8A00F40F3A /* LanguageCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				335C65D127911408000B8C7A /* Main.storyboard */,
 				335C65CF27911408000B8C7A /* Assets.xcassets */,
 				335C65CD27911406000B8C7A /* ViewController.swift */,
+				3365DAC9279BE9E0005E222A /* TextManipulationTools.swift */,
 				33FF3D4827973D8A00F40F3A /* LanguageCodes.swift */,
 				330F37A027916C1B0063E436 /* SwiftGoogleTranslate.swift */,
 				330F37A727923B430063E436 /* Secret.plist */,
@@ -151,6 +154,7 @@
 				33FF3D4927973D8A00F40F3A /* LanguageCodes.swift in Sources */,
 				335C65CE27911406000B8C7A /* ViewController.swift in Sources */,
 				330F37A127916C1B0063E436 /* SwiftGoogleTranslate.swift in Sources */,
+				3365DACA279BE9E0005E222A /* TextManipulationTools.swift in Sources */,
 				335C65DB27914D6D000B8C7A /* HtmlTemplate.swift in Sources */,
 				335C65CC27911406000B8C7A /* AppDelegate.swift in Sources */,
 			);
