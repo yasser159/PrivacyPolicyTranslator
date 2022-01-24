@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PrivacyPolicyTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="643" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="643" height="763"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <gridView fixedFrame="YES" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-6d-j0h">
-                                <rect key="frame" x="353" y="478" width="270" height="126"/>
+                            <gridView misplaced="YES" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-6d-j0h">
+                                <rect key="frame" x="353" y="604" width="270" height="126"/>
                                 <rows>
                                     <gridRow id="0Uh-g2-VQV"/>
                                     <gridRow id="HAG-Bb-X4a"/>
@@ -879,7 +879,7 @@
                                 </gridCells>
                             </gridView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-IL-O9D">
-                                <rect key="frame" x="20" y="478" width="170" height="16"/>
+                                <rect key="frame" x="20" y="604" width="170" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Insert Privacy Policy HTML:" id="nCG-VA-1g9">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -887,28 +887,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow6-kb-PM6" userLabel="txt_Input">
-                                <rect key="frame" x="22" y="40" width="601" height="430"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="g4D-Kc-GFy">
-                                    <font key="font" metaFont="miniSystem"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
-                                <rect key="frame" x="501" y="3" width="129" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-ES-c7Z">
-                                <rect key="frame" x="20" y="531" width="205" height="16"/>
+                                <rect key="frame" x="20" y="674" width="205" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="File Output Prefix" id="h74-SA-2hB">
                                     <font key="font" metaFont="system"/>
@@ -917,7 +897,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-oo-LoR">
-                                <rect key="frame" x="22" y="502" width="316" height="21"/>
+                                <rect key="frame" x="22" y="647" width="284" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="VaccinePassport" bezelStyle="round" id="ag8-an-Wv5">
                                     <font key="font" metaFont="system"/>
@@ -926,7 +906,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5t-Us-wAV">
-                                <rect key="frame" x="20" y="588" width="97" height="16"/>
+                                <rect key="frame" x="20" y="727" width="97" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Google API Key" id="CNH-7h-Fxz">
                                     <font key="font" metaFont="system"/>
@@ -935,7 +915,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-Yz-b6b">
-                                <rect key="frame" x="22" y="559" width="316" height="21"/>
+                                <rect key="frame" x="22" y="698" width="284" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="pnQ-hf-v7a">
                                     <font key="font" metaFont="system"/>
@@ -944,7 +924,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afw-IN-xlx">
-                                <rect key="frame" x="227" y="587" width="111" height="18"/>
+                                <rect key="frame" x="163" y="726" width="111" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Use Test Data" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zq3-gM-dPy">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -954,18 +934,52 @@
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <progressIndicator fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="wWY-sk-FG0">
-                                <rect key="frame" x="28" y="9" width="452" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <progressIndicator misplaced="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="wWY-sk-FG0">
+                                <rect key="frame" x="28" y="9" width="465" height="20"/>
                             </progressIndicator>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPa-Lv-02v">
+                                <rect key="frame" x="20" y="70" width="603" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" allowsEditingTextAttributes="YES" id="LST-Ny-ypr">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <action selector="txt_Changed:" target="XfG-lQ-9wD" id="6y3-Rt-x8b"/>
+                                    </connections>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-MT-5cX">
+                                <rect key="frame" x="494" y="3" width="129" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="tda-80-th4"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KMm-FA-N3l">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="GenerateFiles:" target="XfG-lQ-9wD" id="gS2-a3-PWl"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="bottom" secondItem="wWY-sk-FG0" secondAttribute="bottom" id="5Hd-Ch-VeB"/>
+                            <constraint firstItem="AIw-6d-j0h" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="DlP-H2-6N6"/>
+                            <constraint firstAttribute="trailing" secondItem="AIw-6d-j0h" secondAttribute="trailing" constant="20" symbolic="YES" id="Doa-Nj-MAP"/>
+                            <constraint firstItem="wWY-sk-FG0" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="28" id="HOl-UW-NAE"/>
+                            <constraint firstAttribute="bottom" secondItem="ym8-MT-5cX" secondAttribute="bottom" constant="10" id="IRV-qe-OZT"/>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="trailing" secondItem="AIw-6d-j0h" secondAttribute="trailing" id="RKq-oA-vNk"/>
+                            <constraint firstItem="ym8-MT-5cX" firstAttribute="leading" secondItem="wWY-sk-FG0" secondAttribute="trailing" constant="28" id="YpW-Sn-fdt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btn_generateFiles" destination="ym8-MT-5cX" id="XWb-wm-AT0"/>
                         <outlet property="chkbx_french" destination="cjA-MY-47c" id="ggf-2i-qtc"/>
                         <outlet property="progressBar" destination="wWY-sk-FG0" id="hsQ-P3-qAq"/>
+                        <outlet property="txt_Input" destination="vPa-Lv-02v" id="5Wb-0Z-oTB"/>
                         <outlet property="txt_filePrefix" destination="cOX-oo-LoR" id="Azo-W2-8gk"/>
-                        <outlet property="txt_input" destination="ow6-kb-PM6" id="3KW-HG-Q0C"/>
+                        <outlet property="txt_myInput" destination="LST-Ny-ypr" id="oZ0-Lo-mKR"/>
                         <outlet property="useTestData" destination="Zq3-gM-dPy" id="b2U-iM-arY"/>
                         <outlet property="useTestDataClicked" destination="afw-IN-xlx" id="o6u-In-2Rz"/>
                     </connections>
@@ -981,7 +995,7 @@
                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                 </textFieldCell>
             </objects>
-            <point key="canvasLocation" x="75.5" y="365.5"/>
+            <point key="canvasLocation" x="75.5" y="438.5"/>
         </scene>
     </scenes>
 </document>

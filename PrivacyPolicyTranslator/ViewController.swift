@@ -7,8 +7,8 @@
 import SwiftUI
 
 class ViewController: NSViewController {
-
-    @IBOutlet weak var txt_input: NSTextField!
+    
+    @IBOutlet weak var txt_Input: NSTextField!
     @IBOutlet weak var txt_filePrefix: NSTextField!
     @IBOutlet weak var btn_generateFiles: NSButton!
     @IBOutlet weak var chkbx_french: NSButtonCell!
@@ -36,9 +36,9 @@ class ViewController: NSViewController {
     
     func checkIf_UsingTestData(){
         if useTestData.state == .on {
-            txt_input.stringValue = Html_testData
+            txt_Input.stringValue = Html_testData
         }else {
-            txt_input.stringValue = ""
+            txt_Input.stringValue = ""
         }
     }
     
@@ -47,6 +47,17 @@ class ViewController: NSViewController {
             checkIf_UsingTestData()
         }
 
+    
+    @IBAction func txt_Changed(_ sender: Any) {
+        
+//        let range = NSMakeRange(txt_Input.text.characters.count - 1, 0)
+//        txt_Input.scrollRangeToVisible(range)
+        
+        
+        
+    }
+    
+    
     @IBAction func CheckBoxManager(_ sender: NSButton) {
             processCheckboxes(language: sender.title, checkBoxState: sender.state)
         }
@@ -82,10 +93,10 @@ class ViewController: NSViewController {
     
     for languageCode in languages {
        if languageCode == "en" {  //if english print and Exit, No translation needed
-           saveTranslationToFile(prefix: self.txt_filePrefix.stringValue, languageCode: languageCode, translatedText: txt_input.stringValue )
+           saveTranslationToFile(prefix: self.txt_filePrefix.stringValue, languageCode: languageCode, translatedText: txt_Input.stringValue )
        }
        else{
-           let paragraphs = paragraphsSplitter(input: txt_input.stringValue,characterLimit: 4500,splitterString: "</p>")
+           let paragraphs = paragraphsSplitter(input: txt_Input.stringValue,characterLimit: 4500,splitterString: "</p>")
            var resultTranslation = ""
 
            for paraghraph in paragraphs {
