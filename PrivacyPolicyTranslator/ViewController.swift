@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var btn_generateFiles: NSButton!
     @IBOutlet weak var chkbx_french: NSButtonCell!
     @IBOutlet weak var progressBar: NSProgressIndicator!
+    
     var languages = [String]()
     
     @IBOutlet weak var useTestData: NSButtonCell!
@@ -46,17 +47,6 @@ class ViewController: NSViewController {
             super.viewDidLoad()
             checkIf_UsingTestData()
         }
-
-    
-    @IBAction func txt_Changed(_ sender: Any) {
-        
-//        let range = NSMakeRange(txt_Input.text.characters.count - 1, 0)
-//        txt_Input.scrollRangeToVisible(range)
-        
-        
-        
-    }
-    
     
     @IBAction func CheckBoxManager(_ sender: NSButton) {
             processCheckboxes(language: sender.title, checkBoxState: sender.state)
@@ -88,7 +78,7 @@ class ViewController: NSViewController {
     
     SwiftGoogleTranslate.shared.start(with: apiKey)
     progressBar.doubleValue = 0.0
-    let progress = Double(100/languages.count)
+    //let progress = Double(100/languages.count)
     print("progressBar.doubleValue: ", progressBar.doubleValue )
     
     for languageCode in languages {
@@ -107,14 +97,14 @@ class ViewController: NSViewController {
                                        }
 
                let second: Double = 1000000
-               usleep(useconds_t(0.2 * second)) // Sleep for 200 milliseconds
+               usleep(useconds_t(0.4 * second)) // Sleep for 400 milliseconds
             }
            let filePrefix = self.txt_filePrefix.stringValue
            self.saveTranslationToFile(prefix: filePrefix, languageCode: languageCode, translatedText: resultTranslation)
            
-           progressBar.doubleValue = progressBar.doubleValue + progress
-           //progressBar.
-           print("progressBar.doubleValue: ", progressBar.doubleValue )
+           //progressBar.doubleValue = progressBar.doubleValue + progress
+        
+         //  print("progressBar.doubleValue: ", progressBar.doubleValue )
        }
    }
     progressBar.doubleValue = 100.0
@@ -134,3 +124,6 @@ extension Dictionary where Value: Equatable {
         return first(where: { $1 == val })?.key
     }
 }
+
+
+//nkjnlknlkdjfkldsjfsdklfj

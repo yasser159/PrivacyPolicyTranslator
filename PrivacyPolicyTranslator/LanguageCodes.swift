@@ -20,4 +20,6 @@ var dict_languageCodes = [ "English"   : "en",
                            "Portuguese": "pt",
                            "Russian"   : "ru",
                            "Greek"     : "el",
-                           "German"    : "de"]
+                           "German"    : "de",
+                           "Turkish"   : "tr",
+                           "Hebrew"    : "iw"]
